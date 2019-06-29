@@ -1,5 +1,7 @@
 package br.com.evg.classes;
 
+import java.util.Calendar;
+
 /**
  * @Author: Anderson Silva Brino 
  * @Data: 14/06/2019
@@ -12,7 +14,7 @@ public class Fotos {
     private Evangelista cod_Evg;
     private Usuario cod_Usuario;
     private Projeto cod_Projeto;
-    private Relatorio cod_Relatorio;
+    private Calendar data;
 
     public Integer getCod_Foto() {
         return cod_Foto;
@@ -60,17 +62,15 @@ public class Fotos {
 
     public void setCod_Projeto(Projeto cod_Projeto) {
         this.cod_Projeto = cod_Projeto;
+    }    
+
+    public Calendar getData() {
+        return data;
     }
 
-    public Relatorio getCod_Relatorio() {
-        return cod_Relatorio;
+    public void setData(Calendar data) {
+        this.data = data;
     }
-
-    public void setCod_Relatorio(Relatorio cod_Relatorio) {
-        this.cod_Relatorio = cod_Relatorio;
-    }
-    
-    
     
     public void cadastrar_Foto(){
         
