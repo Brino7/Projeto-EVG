@@ -1,20 +1,31 @@
 package br.com.evg.classes;
 
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 /**
  * @Author: Anderson Silva Brino 
  * @Data: 08/08/2019
  * @Hora: 12:17:49
  */
-public class Relatorio_Geral extends Relatorio{
-    protected int cod_Relatorio_Geral,  obreiros, evangelistas, nov_evg,
+@Entity
+public class Relatorio_Geral extends Relatorio implements Serializable{
+    
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int obreiros, evangelistas, nov_evg,
             total, evg_cpo, evg_pre_cpo, bat_esp_santo, hom_pre_iburd_ou_iburd,
             mulheres_cand_altar;
+    private Long cod_Relatorio_Geral;
 
-    public int getCod_Relatorio_Geral() {
+    public Long getCod_Relatorio_Geral() {
         return cod_Relatorio_Geral;
     }
 
-    public void setCod_Relatorio_Geral(int cod_Relatorio_Geral) {
+    public void setCod_Relatorio_Geral(Long cod_Relatorio_Geral) {
         this.cod_Relatorio_Geral = cod_Relatorio_Geral;
     }
 
@@ -91,27 +102,27 @@ public class Relatorio_Geral extends Relatorio{
     }
     
     @Override
-    protected void cadastrar_Relatorio(){
-        
+    public int hashCode() {
+        int hash = 0;
+        hash += (cod_Relatorio_Geral != null ? cod_Relatorio_Geral.hashCode() : 0);
+        return hash;
     }
-    
+
     @Override
-    protected void buscar_Relatorio(){
-        
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Relatorio_Geral)) {
+            return false;
+        }
+        Relatorio_Geral other = (Relatorio_Geral) object;
+        if ((this.cod_Relatorio_Geral == null && other.cod_Relatorio_Geral != null) || (this.cod_Relatorio_Geral != null && !this.cod_Relatorio_Geral.equals(other.cod_Relatorio_Geral))) {
+            return false;
+        }
+        return true;
     }
-    
+
     @Override
-    protected void editar_Relatorio(){
-        
-    }
-    
-    @Override
-    protected void remover_Relatorio(){
-        
-    }
-    
-    @Override
-    protected void imprimir_Relatorio(){
-        
+    public String toString() {
+        return "br.com.provas.entity.Cursos[ id= " + cod_Relatorio_Geral + " ]";
     }
 }
