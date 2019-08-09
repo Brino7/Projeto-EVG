@@ -3,6 +3,9 @@ package br.com.evg.classes;
 import java.io.Serializable;
 import java.util.Calendar;
 import java.util.List;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * @Author: Anderson Silva Brino 
@@ -10,18 +13,21 @@ import java.util.List;
  * @Hora: 18:42:57
  */
 public class Evangelista extends Pessoa implements Serializable{
-    private Integer cod_EVG;
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long cod_EVG;
     private String bloco, regiao, empresa, whatshapp, residencial, numero_casa,
             complemento, testemunho, nome_lider, nome_pastor;
     private Calendar data_entrou_evg, data_casamento, data_levantado;
     private Boolean evg_obreiro, estuda_atualmente, esta_trabalhando;
     private List titulo;
 
-    public Integer getCod_EVG() {
+    public Long getCod_EVG() {
         return cod_EVG;
     }
 
-    public void setCod_EVG(Integer cod_EVG) {
+    public void setCod_EVG(Long cod_EVG) {
         this.cod_EVG = cod_EVG;
     }
 
@@ -161,28 +167,28 @@ public class Evangelista extends Pessoa implements Serializable{
         this.titulo = titulo;
     }
     
-    @Override
-    protected void cadastrar(){
-        
+     @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (cod_EVG != null ? cod_EVG.hashCode() : 0);
+        return hash;
     }
-    
+
     @Override
-    protected void remover(){
-        
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Evangelista)) {
+            return false;
+        }
+        Evangelista other = (Evangelista) object;
+        if ((this.cod_EVG == null && other.cod_EVG != null) || (this.cod_EVG != null && !this.cod_EVG.equals(other.cod_EVG))) {
+            return false;
+        }
+        return true;
     }
-    
+
     @Override
-    protected void buscar(){
-        
-    }
-    
-    @Override
-    protected void editar(){
-        
-    }
-    
-    @Override
-    protected void imprimir(){
-        
+    public String toString() {
+        return "br.com.provas.classes.Evagelista[ id=" + cod_EVG + " ]";
     }
 }
