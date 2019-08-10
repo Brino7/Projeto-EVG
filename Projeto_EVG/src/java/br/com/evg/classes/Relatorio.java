@@ -13,7 +13,7 @@ public abstract class Relatorio {
     protected Usuario cod_Usuario;
     protected List tipo;
     protected Calendar data;
-    protected String descricao, observacao, ass_Cord_Evg, ass_Pastor;
+    protected String descricao, observacao, ass_Cord_Evg, ass_Pastor, bairro, ruas;
     protected Integer quant_Obreiro, quant_Evangelista, quant_Pessoas_Alca, 
             vieram_Igreja, livros_Biblias_Doados, cest_Basic_Doadas, kits_Higiene,
             event_Realizados;
