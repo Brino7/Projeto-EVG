@@ -75,6 +75,6 @@ public class Usuario extends Pessoa implements Serializable{
 
     @Override
     public String toString() {
-        return "br.com.provas.classes.Usuario[ id=" + cod_Usuario + " ]";
+        return "br.com.evg.classes.Usuario[ id=" + cod_Usuario + " ]";
     } 
 }
