@@ -455,7 +455,7 @@ public class Permissao implements Serializable {
 
     @Override
     public String toString() {
-        return "br.com.provas.classes.Permissao[ id= " + cod_Perimissao + " ]";
+        return "br.com.evg.classes.Permissao[ id= " + cod_Perimissao + " ]";
     }
     
 }
