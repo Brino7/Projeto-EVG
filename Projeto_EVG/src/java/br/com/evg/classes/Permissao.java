@@ -1,13 +1,21 @@
 package br.com.evg.classes;
 
 import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * @Author: Anderson Silva Brino 
  * @Data: 14/06/2019
  * @Hora: 19:22:45
  */
+@Entity
 public class Permissao {
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer cod_Perimissao;
     private Usuario cod_Usuario;
     private List permissao;
@@ -424,20 +432,29 @@ public class Permissao {
         this.pag_Foto = pag_Foto;
     }
     
-    public void cadastrar_Permissao(){
-        
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (cod_Perimissao != null ? cod_Perimissao.hashCode() : 0);
+        return hash;
     }
-    
-    public void remover_Permissao(){
-        
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Permissao)) {
+            return false;
+        }
+        Permissao other = (Permissao) object;
+        if ((this.cod_Perimissao == null && other.cod_Perimissao != null) || (this.cod_Perimissao != null && !this.cod_Perimissao.equals(other.cod_Perimissao))) {
+            return false;
+        }
+        return true;
     }
-    
-    public void buscar_Permisso(){
-        
-    }
-    
-    public void editar_Permissao(){
-        
+
+    @Override
+    public String toString() {
+        return "br.com.provas.classis.Permissao[ id= " + cod_Perimissao + " ]";
     }
     
 }
