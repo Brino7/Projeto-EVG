@@ -103,6 +103,6 @@ public class Fotos implements Serializable {
 
     @Override
     public String toString() {
-        return "br.com.provas.classes.Fotos[ id= " + cod_Foto + " ]";
+        return "br.com.evg.classes.Fotos[ id= " + cod_Foto + " ]";
     }
 }
