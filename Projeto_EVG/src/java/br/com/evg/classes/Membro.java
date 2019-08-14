@@ -147,6 +147,6 @@ public class Membro extends Pessoa implements Serializable{
 
     @Override
     public String toString() {
-        return "br.com.provas.classes.Membro[ id=" + cod_Membro + " ]";
+        return "br.com.evg.classes.Membro[ id=" + cod_Membro + " ]";
     }  
 }
