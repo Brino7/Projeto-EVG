@@ -3,6 +3,7 @@ package br.com.evg.classes;
 import java.io.Serializable;
 import java.util.Calendar;
 import java.util.List;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -12,6 +13,7 @@ import javax.persistence.Id;
  * @Data: 14/06/2019
  * @Hora: 18:42:57
  */
+@Entity
 public class Evangelista extends Pessoa implements Serializable{
     private static final long serialVersionUID = 1L;
     @Id
@@ -189,6 +191,6 @@ public class Evangelista extends Pessoa implements Serializable{
 
     @Override
     public String toString() {
-        return "br.com.provas.classes.Evagelista[ id=" + cod_EVG + " ]";
+        return "br.com.evg.classes.Evagelista[ id=" + cod_EVG + " ]";
     }
 }
