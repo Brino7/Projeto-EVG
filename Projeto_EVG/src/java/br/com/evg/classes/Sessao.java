@@ -77,6 +77,6 @@ public class Sessao implements Serializable {
 
     @Override
     public String toString() {
-        return "br.com.provas.classes.Sessao[ id= " + cod_Sessao + " ]";
+        return "br.com.evg.classes.Sessao[ id= " + cod_Sessao + " ]";
     }
 }
