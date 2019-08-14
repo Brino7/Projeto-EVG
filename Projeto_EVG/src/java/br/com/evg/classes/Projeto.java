@@ -57,6 +57,6 @@ public class Projeto implements Serializable {
 
     @Override
     public String toString() {
-        return "br.com.provas.classes.Projeto[ id= " + cod_Projeto + " ]";
+        return "br.com.evg.classes.Projeto[ id= " + cod_Projeto + " ]";
     }
 }
