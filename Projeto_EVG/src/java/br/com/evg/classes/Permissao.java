@@ -1,5 +1,6 @@
 package br.com.evg.classes;
 
+import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,7 +13,7 @@ import javax.persistence.Id;
  * @Hora: 19:22:45
  */
 @Entity
-public class Permissao {
+public class Permissao implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -454,7 +455,7 @@ public class Permissao {
 
     @Override
     public String toString() {
-        return "br.com.provas.classis.Permissao[ id= " + cod_Perimissao + " ]";
+        return "br.com.provas.classes.Permissao[ id= " + cod_Perimissao + " ]";
     }
     
 }
