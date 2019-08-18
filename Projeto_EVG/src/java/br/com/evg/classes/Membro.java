@@ -2,6 +2,9 @@ package br.com.evg.classes;
 
 import java.io.Serializable;
 import java.util.List;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  * @Author: Anderson Silva Brino 
@@ -9,16 +12,20 @@ import java.util.List;
  * @Hora: 18:42:10
  */
 public class Membro extends Pessoa implements Serializable{
-    private Integer cod_Membro, zona, secao;
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long cod_Membro; 
+    private Integer zona, secao;
     private String cep, rg, cpf, titulo_eleitor, titulo_eleitor_cidade_uf, 
             nome_conjuge, assinatura, sede_igreja;
     private List recebido_por, funcao;
 
-    public Integer getCod_Membro() {
+    public Long getCod_Membro() {
         return cod_Membro;
     }
 
-    public void setCod_Membro(Integer cod_Membro) {
+    public void setCod_Membro(Long cod_Membro) {
         this.cod_Membro = cod_Membro;
     }
 
@@ -118,28 +125,28 @@ public class Membro extends Pessoa implements Serializable{
         this.funcao = funcao;
     }
     
-    @Override
-    protected void cadastrar(){
-        
+   @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (cod_Membro != null ? cod_Membro.hashCode() : 0);
+        return hash;
     }
-    
+
     @Override
-    protected void remover(){
-        
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Membro)) {
+            return false;
+        }
+        Membro other = (Membro) object;
+        if ((this.cod_Membro == null && other.cod_Membro != null) || (this.cod_Membro != null && !this.cod_Membro.equals(other.cod_Membro))) {
+            return false;
+        }
+        return true;
     }
-    
+
     @Override
-    protected void buscar(){
-        
-    }
-    
-    @Override
-    protected void editar(){
-        
-    }
-    
-    @Override
-    protected void imprimir(){
-        
-    }
+    public String toString() {
+        return "br.com.evg.classes.Membro[ id=" + cod_Membro + " ]";
+    }  
 }
