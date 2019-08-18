@@ -123,6 +123,6 @@ public class Relatorio_Geral extends Relatorio implements Serializable{
 
     @Override
     public String toString() {
-        return "br.com.provas.entity.Cursos[ id= " + cod_Relatorio_Geral + " ]";
+        return "br.com.evg.classes.Relatorio_Geral[ id= " + cod_Relatorio_Geral + " ]";
     }
 }
