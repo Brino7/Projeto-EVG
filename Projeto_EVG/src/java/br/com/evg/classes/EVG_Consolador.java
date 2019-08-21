@@ -56,6 +56,6 @@ public class EVG_Consolador extends Relatorio implements Serializable{
 
     @Override
     public String toString() {
-        return "br.com.evg.classes.EVG_Consolador[ id= " + cod_Rel_EVG_Cons + " ]";
+        return "br.com.evg.classes.EVG_Consolador[ id= " + cod_Rel_EVG_Cons+ " ]";
     }
 }
