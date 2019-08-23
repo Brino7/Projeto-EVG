@@ -16,13 +16,14 @@ public class Rel_Nuc_Lar extends Relatorio implements Serializable{
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer cod_Rel_Nu_Lar, nucleo_Realizados, volt_Igreja, bat_Nucleo;
+    private Integer nucleo_Realizados, volt_Igreja, bat_Nucleo;
+    private Long cod_Rel_Nu_Lar;
 
-    public Integer getCod_Rel_Nu_Lar() {
+    public Long getCod_Rel_Nu_Lar() {
         return cod_Rel_Nu_Lar;
     }
 
-    public void setCod_Rel_Nu_Lar(Integer cod_Rel_Nu_Lar) {
+    public void setCod_Rel_Nu_Lar(Long cod_Rel_Nu_Lar) {
         this.cod_Rel_Nu_Lar = cod_Rel_Nu_Lar;
     }
 
