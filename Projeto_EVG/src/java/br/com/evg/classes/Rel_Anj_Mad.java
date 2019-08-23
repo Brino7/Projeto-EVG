@@ -16,14 +16,15 @@ public class Rel_Anj_Mad extends Relatorio implements Serializable{
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer cod_Rel_Anj_Mad, ref_Servidas, quant_Cafe_Serv, quant_Suco_Serv,
+    private Integer ref_Servidas, quant_Cafe_Serv, quant_Suco_Serv,
             quant_roupas_Doadas, quant_Cob_Doado, quant_Agas_Distribuidos;
+    private Long cod_Rel_Anj_Mad;
 
-    public Integer getCod_Rel_Anj_Mad() {
+    public Long getCod_Rel_Anj_Mad() {
         return cod_Rel_Anj_Mad;
     }
 
-    public void setCod_Rel_Anj_Mad(Integer cod_Rel_Anj_Mad) {
+    public void setCod_Rel_Anj_Mad(Long cod_Rel_Anj_Mad) {
         this.cod_Rel_Anj_Mad = cod_Rel_Anj_Mad;
     }
 
