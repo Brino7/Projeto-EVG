@@ -16,13 +16,13 @@ public class Rel_Ag_Com  extends Relatorio implements Serializable{
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer cod_Rel_Ag_Com;
+    private Long cod_Rel_Ag_Com;
 
-    public Integer getCod_Rel_Ag_Com() {
+    public Long getCod_Rel_Ag_Com() {
         return cod_Rel_Ag_Com;
     }
 
-    public void setCod_Rel_Ag_Com(Integer cod_Rel_Ag_Com) {
+    public void setCod_Rel_Ag_Com(Long cod_Rel_Ag_Com) {
         this.cod_Rel_Ag_Com = cod_Rel_Ag_Com;
     }
     
